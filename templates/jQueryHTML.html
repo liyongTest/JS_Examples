@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery HTML</title>
+    <script src="../static/js/jQuery/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+            alert("Text: " + $('#test').text());
+        });
+        $('#btn2').click(function(){
+            alert("HTML: " + $('#test').html());
+        })
+        $('#btn3').click(function(){
+            $('#test1').text("Hello World!");
+        });
+        $('#btn4').click(function(){
+            $('#test2').html("<b>Hello World!</b>");
+        })
+        $('#btn5').click(function(){
+            $('#test3').val("Dolly Duck");
+        })
+        $('#btn6').click(function(){
+            $('#test4').attr("href",function(i,origValue){
+                return origValue + "/animate";
+            });
+        });
+    })
+</script>
+<body>
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    <p id="test1"></p>
+    <p id="test2"></p>
+    <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+    <a href="/" id="test4" title="Hello">测试首页</a>
+    <button id="btn1" type="button">显示Text</button>
+    <button id="btn2" type="button">显示HTML</button>
+    <button id="btn3" type="button">设置Text</button>
+    <button id="btn4" type="button">设置HTML</button>
+    <button id="btn5" type="button">设置VAL</button>
+    <button id="btn6" type="button">设置href</button>
+</body>
+</html>

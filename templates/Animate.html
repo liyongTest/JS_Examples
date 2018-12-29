@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画效果</title>
+    <script src="../static/js/jQuery/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+            $('#div1').animate({
+                left:'250px'
+            });
+        })
+        $('#btn2').click(function(){
+            $('#div1').animate({
+                left:'250px',
+                opacity:'0.5',
+                height:'150px',
+                width:'150px'
+            });
+        })
+        $('#btn3').click(function(){
+            $('#div1').animate({
+                left:'250px',
+                opacity:'0.5',
+                height:'+=50px',
+                width:'+=50px'
+            });
+        })
+        $('#btn4').click(function(){
+            $('#div1').animate({
+                height:'toggle',
+                width:'toggle'
+            });
+        })
+        $('#btn5').click(function(){
+            var div=$("#div1");
+            div.animate({height:'300px',opacity:'0.4'},"slow");
+            div.animate({width:'300px',opacity:'0.8'},"slow");
+            div.animate({height:'100px',opacity:'0.4'},"slow");
+            div.animate({width:'100px',opacity:'0.8'},"slow");
+        });
+        $('#btn6').click(function(){
+            var div = $('#div1');
+            div.animate({left:'100px'},"slow");
+            div.animate({fontSize:'3em'},"slow");
+        })
+    });
+</script>
+<body>
+<button id="btn1" type="button">左移</button>
+<button id="btn2" type="button">多个属性</button>
+<button id="btn3" type="button">相对值</button>
+<button id="btn4" type="button">预设值</button>
+<button id="btn5" type="button">队列</button>
+<button id="btn6" type="button">操作</button>
+<div id="div1" style="background:#98bf21;height:100px;width:100px;position:absolute;">Hello</div>
+</div>
+</body>
+</html>

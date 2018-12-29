@@ -1,0 +1,4 @@
+<div id="div1"><h2>使用 jQuery AJAX 修改文本内容</h2></div>
+<div id="div2"><h2>加载外部指定的元素</h2></div>
+<button id="btn">加载外部内容</button>
+<button id="btn2">加载指定元素</button>
